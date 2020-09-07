@@ -1237,7 +1237,35 @@ secondFunction();
 
 ## НАПИШИ КОД
 
-### 1. Написать функцию, которая отфильтрует нечетные числа массив и сортирует массив по возростанию
+### 1. Написать функцию, которая сортирует массив по возростанию
+
+```javascript
+const array = [8, 4, 5, 7, 2, 3];
+
+function sort(arr) {
+  return [];
+}
+
+console.log(sort(array));
+```
+
+<details><summary><b>Ответ</b></summary>
+<p>
+
+#### Ответ
+
+```javascript
+function sort(arr) {
+  return [...arr].sort((a, b) => a - b);
+}
+```
+
+</p>
+</details>
+
+---
+
+### 2. Написать функцию, которая отфильтрует нечетные числа массив и сортирует массив по возростанию
 
 ```javascript
 const array = [8, 4, 5, 7, 2, 3];
@@ -1265,7 +1293,7 @@ function filterAndSort(arr) {
 
 ---
 
-### 2. Написать функцию, которая отфильтрует дубликаты в массиве
+### 3. Написать функцию, которая отфильтрует дубликаты в массиве
 
 ```javascript
 const array = [8, 4, 4, 2, 2, 1];
@@ -1293,7 +1321,7 @@ function removeDuplicates(arr) {
 
 ---
 
-### 3. Напишите собственную реализацию метода map?
+### 4. Напишите собственную реализацию метода map?
 
 ```js
 function map(arr, mapCallback) {
@@ -1317,7 +1345,7 @@ function map(arr, mapCallback) {
 
 ---
 
-### 4. Напишите собственную реализацию метода reduce?
+### 5. Напишите собственную реализацию метода reduce?
 
 ```js
 function reduce(arr, reduceCallbak, initialValue) {
