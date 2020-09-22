@@ -1321,7 +1321,67 @@ function removeDuplicates(arr) {
 
 ---
 
-### 4. Напишите собственную реализацию метода map?
+### 4. Написать функцию, которая преобразует массив в объект. Ключами результируещего объекта должны быть айдишники элементов массива, а значениемя элемент массива
+
+```javascript
+const array = [
+  {
+    id: "id_1",
+    text: "text 1",
+  },
+  {
+    id: "id_2",
+    text: "text 2",
+  },
+  {
+    id: "id_3",
+    text: "text 3",
+  },
+];
+
+function arrayToObject(arr) {
+  return {};
+}
+
+console.log(arrayToObject(array));
+/*
+  {
+    "id_1":{
+      id: "id_1",
+      text: "text 1"
+    },
+    "id_2":{
+      id: "id_2",
+      text: "text 2"
+    },
+    "id_3":{
+      id: "id_3",
+      text: "text 3"
+    }
+  }
+*/
+```
+
+<details><summary><b>Ответ</b></summary>
+<p>
+
+#### Ответ
+
+```javascript
+function arrayToObject(arr) {
+  return array.reduce( (acc, el)=>{
+    acc[el.id] = el;
+    return acc;
+  }, {});
+}
+```
+
+</p>
+</details>
+
+---
+
+### 5. Напишите собственную реализацию метода map?
 
 ```js
 function map(arr, mapCallback) {
@@ -1345,7 +1405,7 @@ function map(arr, mapCallback) {
 
 ---
 
-### 5. Напишите собственную реализацию метода reduce?
+### 6. Напишите собственную реализацию метода reduce?
 
 ```js
 function reduce(arr, reduceCallbak, initialValue) {
