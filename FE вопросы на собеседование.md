@@ -1240,7 +1240,7 @@ secondFunction();
 ### 1. Написать функцию, которая сортирует массив по возростанию
 
 ```javascript
-const array = [8, 4, 5, 7, 2, 3];
+const array = [8, 4, 5, 7, 2, 3, 10];
 
 function sort(arr) {
   return [];
@@ -1474,3 +1474,7 @@ actions, reducers, middleware
 ## Redux Saga
 
 ### 1. Что такое Redux Saga?
+
+## Unit тесты
+
+## Git
