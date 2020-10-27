@@ -489,6 +489,29 @@ sayHi();
 
 ---
 
+### 2. Что будет в консоли?
+
+```javascript
+const a = {name: 'zzz'}
+const b = {
+  [a]: 1
+}
+b[{}] = 2
+console.log(b[a])
+```
+
+<details><summary><b>Ответ</b></summary>
+<p>
+
+#### Ответ:
+
+2
+
+</p>
+</details>
+
+---
+
 ### 3. Что будет в консоли?
 
 ```javascript
@@ -1428,6 +1451,48 @@ function reduce(arr, reduceCallbak, initialValue) {
 ```
 
 Метод reduce применяет функцию reducer к каждому элементу массива (слева-направо), возвращая одно результирующее значение.
+
+---
+
+### 7. Деструктуризация объекта
+
+```javascript
+const product = {
+  price: 3990,
+  options: [
+    {
+      id: 1,
+      title: '256ГБ',
+      price: 450,
+    },
+    {
+      id: 2,
+      title: '512ГБ',
+      price: 990,
+    }
+  ],
+  info: {
+    screen:{
+      size:{
+        width: 1024,
+        height: 768,
+      }
+    }
+  }
+}
+```
+
+<details><summary><b>Ответ</b></summary>
+<p>
+
+#### Ответ
+
+```javascript
+const { options : [ _, {price} ], info: {screen: {size: {width } } } } = product;
+```
+
+</p>
+</details>
 
 ---
 
