@@ -1129,6 +1129,32 @@ console.log(two.next().value); // undefined
 
 ### 1. Что будет в консоли?
 
+new Promise(res => res())
+    .then(() => console.log(1))
+    .catch(() => console.log(2))
+    .then(() => {
+     throw new Error('Ошибка')
+   })
+    .catch(err => {
+     console.log(4)
+     throw err
+     console.log(5)
+   })
+    .then(() => console.log(6))
+    .catch(() => console.log(7))
+
+<details><summary><b>Ответ</b></summary>
+<p>
+
+1, 4, 7
+
+</p>
+</details>
+
+--- 
+
+### 2. Что будет в консоли?
+
 ```javascript
 for (var i = 0; i < 3; i++) {
   setTimeout(() => console.log(i), 1);
@@ -1157,7 +1183,7 @@ for (let i = 0; i < 3; i++) {
 
 ---
 
-### 2. Каким будет результат?
+### 3. Каким будет результат?
 
 ```javascript
 const firstPromise = new Promise((res, rej) => {
@@ -1188,7 +1214,7 @@ Promise.race([firstPromise, secondPromise]).then((res) => console.log(res));
 
 ---
 
-### 2. Что будет в консоли?
+### 4. Что будет в консоли?
 
 ```javascript
 function output() {
@@ -1214,7 +1240,7 @@ output();
 
 ---
 
-### 3. Какое значение будет на выходе?
+### 5. Какое значение будет на выходе?
 
 ```javascript
 const myPromise = () => Promise.resolve("I have resolved!");
